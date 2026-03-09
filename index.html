@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Anupama Kawale | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:0;
+  background: linear-gradient(120deg,#f9f871,#4caf50);
+  color:#333;
+  scroll-behavior:smooth;
+}
+
+/* Header */
+header{
+  text-align:center;
+  color:white;
+  padding:40px;
+}
+
+#typing{
+  font-size:22px;
+  margin-top:10px;
+  min-height:28px;
+}
+
+/* Navigation */
+nav{
+  background:white;
+  text-align:center;
+  padding:15px;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+nav a{
+  margin:15px;
+  text-decoration:none;
+  font-weight:bold;
+  color:#333;
+  transition:0.3s;
+}
+nav a:hover, nav a.active{
+  color:#2e7d32;
+}
+
+/* Sections */
+section{
+  padding:50px;
+  text-align:center;
+  opacity:0;
+  transform:translateY(30px);
+  transition:1s;
+}
+section.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Card */
+.card{
+  background:white;
+  width:60%;
+  margin:auto;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  margin-bottom:30px;
+  transition:0.3s;
+}
+.card:hover{
+  transform:scale(1.03);
+  background:#81c784;
+  color:white;
+}
+
+/* Skills */
+.skills span{
+  display:inline-block;
+  background:#4caf50;
+  color:white;
+  padding:8px 15px;
+  border-radius:20px;
+  margin:5px;
+  cursor:pointer;
+  transition:0.3s;
+}
+.skills span:hover{
+  background:#2e7d32;
+  transform:scale(1.1);
+}
+
+/* Progress Bars */
+.progress{
+  background:#eee;
+  border-radius:20px;
+  overflow:hidden;
+  margin:10px 0;
+}
+.progress-bar{
+  width:0%;
+  height:20px;
+  background:#4caf50;
+  border-radius:20px;
+  text-align:right;
+  color:white;
+  padding-right:5px;
+  line-height:20px;
+  transition:1s;
+}
+
+/* Project Links */
+#projects a{
+  background:#4caf50;
+  color:white;
+  padding:8px 15px;
+  border-radius:6px;
+  text-decoration:none;
+}
+#projects a:hover{
+  background:#2e7d32;
+}
+
+/* Button */
+button{
+  padding:10px 20px;
+  border:none;
+  background:#4caf50;
+  color:white;
+  border-radius:6px;
+  cursor:pointer;
+}
+button:hover{
+  background:#2e7d32;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  color:white;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Anupama Kawale</h1>
+<p id="typing"></p>
+</header>
+
+<nav>
+<a href="#about" class="nav-link">About</a>
+<a href="#skills" class="nav-link">Skills</a>
+<a href="#projects" class="nav-link">Projects</a>
+<a href="#contact" class="nav-link">Contact</a>
+</nav>
+
+<!-- About -->
+
+<section id="about">
+<div class="card">
+<h2>About Me</h2>
+<p>I am passionate about web technologies and teaching. I enjoy creating websites and helping others with IT solutions.</p>
+<button onclick="hello()">Click me...!</button>
+</div>
+</section>
+
+<!-- Skills -->
+
+<section id="skills">
+<div class="card">
+<h2>Skills</h2>
+
+<div class="skills">
+<span onclick="skill('HTML')">HTML</span>
+<span onclick="skill('CSS')">CSS</span>
+<span onclick="skill('Document Editing')">Document Editing</span>
+<span onclick="skill('Programming')">Basic Programming</span>
+<span onclick="skill('Teaching')">Teaching</span>
+</div>
+
+<h3>Skill Levels</h3>
+
+<div class="progress">HTML
+<div class="progress-bar" data-width="90%">90%</div>
+</div>
+
+<div class="progress">CSS
+<div class="progress-bar" data-width="80%">80%</div>
+</div>
+
+<div class="progress">JavaScript
+<div class="progress-bar" data-width="70%">70%</div>
+</div>
+
+<div class="progress">Teaching
+<div class="progress-bar" data-width="95%">95%</div>
+</div>
+
+</div>
+</section>
+
+<!-- Projects -->
+
+<section id="projects">
+
+<h2>My Projects</h2>
+
+<div class="card">
+<h3>My portfolio/h3>
+<p>Personal portfolio created using HTML, CSS, and JavaScript.</p>
+<a href="https://github.com/amkawale/portfolio.git" target="_blank">
+View Project on GitHub
+</a>
+</div>
+
+
+
+
+
+
+
+<div class="card">
+<h3>READERS_CAVE-WEBSITE</h3>
+<p>In this website you can sell or purchase used books the last file user_db.csv is a database</p>
+<a href="https://github.com/amkawale/Readers-cave-website.git" target="_blank">
+View Project on GitHub
+</a>
+</div>
+
+<div class="card">
+<h3>Form-Management-Website</h3>
+<p>The Form Builder Website allows users to create customized forms based on selected themes and objects. Users can design forms according to their needs and preview the created form at the end.
+This project focuses on form design and layout creation, but it does not include form data saving functionality.</p>
+<a href="https://github.com/amkawale/Form-Management-Website.git" target="_blank">
+View Project on GitHub
+</a>
+</div>
+
+<div class="card">
+<h3>MoodMuse-AI-Powered-Emotional-Playlist-Curator-using-ai</h3>
+<p>MoodMuse is an AI-driven music recommendation system that detects a user's emotional state in real time using facial expression analysis, voice tone, and textual input (like messages or journal entries), then curates personalized playlists to either match or elevate their mood.</p>
+<a href="https://github.com/amkawale/MoodMuse-AI-Powered-Emotional-Playlist-Curator-using-ai.git" target="_blank">
+View Project on GitHub
+</a>
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+<div class="card">
+<h2>Contact Me</h2>
+<p><b>Email:</b> <a href="mailto:anupamakawale36@gmail.com">anupamakawale36@gmail.com</a></p>
+<p><b>Phone:</b> 8970875208</p>
+<p><b>LinkedIn:</b> 
+<a href="https://www.linkedin.com/in/anupama-kawale-a90ba0265" target="_blank">
+linkedin.com/in/anupama-kawale-a90ba0265
+</a>
+</p>
+<p>Available for freelance work</p>
+</div>
+</section>
+
+<footer>
+<p>© <span id="year"></span> Anupama Kawale</p>
+</footer>
+
+<script>
+
+// Typing animation
+let text = "MCA | Lecturer | Web Enthusiast";
+let i = 0;
+
+function typing(){
+  if(i < text.length){
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing,100);
+  }
+}
+typing();
+
+// Button click
+function hello(){
+  alert("Thank you for visiting my portfolio!");
+}
+
+// Skill click
+function skill(name){
+  alert("You clicked skill: " + name);
+}
+
+// Scroll reveal
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll",()=>{
+
+sections.forEach(sec=>{
+
+const top = window.scrollY;
+const offset = sec.offsetTop - 400;
+
+if(top > offset){
+
+sec.classList.add("show");
+
+if(sec.id==="skills"){
+
+const bars = document.querySelectorAll(".progress-bar");
+
+bars.forEach(bar=>{
+bar.style.width = bar.getAttribute("data-width");
+});
+
+}
+
+}
+
+});
+
+});
+
+// Footer year
+document.getElementById("year").innerText = new Date().getFullYear();
+
+// Nav highlight
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll",()=>{
+
+let fromTop = window.scrollY + 200;
+
+navLinks.forEach(link=>{
+
+let section = document.querySelector(link.getAttribute("href"));
+
+if(section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop){
+
+link.classList.add("active");
+
+}else{
+
+link.classList.remove("active");
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
